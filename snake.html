@@ -1,0 +1,867 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mohammed Akhil | Professional Snake Rescue Hyderabad</title>
+  <meta name="description" content="Professional snake rescue service by Mohammed Akhil in Yousuf Guda, Jawahar Nagar, Hyderabad. Call for safe snake rescue and animal protection.">
+  <style>
+    :root {
+      --forest: #11382c;
+      --leaf: #2f7c4a;
+      --moss: #dce8c8;
+      --sun: #f6c453;
+      --clay: #b85b38;
+      --ink: #17231e;
+      --muted: #5d6b63;
+      --paper: #fbfaf4;
+      --white: #ffffff;
+      --line: rgba(17, 56, 44, 0.16);
+      --shadow: 0 22px 70px rgba(12, 34, 27, 0.18);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.55;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px clamp(16px, 5vw, 64px);
+      background: rgba(251, 250, 244, 0.92);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(14px);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+      font-weight: 800;
+      color: var(--forest);
+    }
+
+    .brand-logo {
+      flex: 0 0 auto;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--white);
+      border: 2px solid rgba(47, 124, 74, 0.22);
+      object-fit: cover;
+    }
+
+    .brand span:last-child {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .nav a {
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .call-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 44px;
+      padding: 0 18px;
+      border: 0;
+      border-radius: 999px;
+      background: var(--clay);
+      color: var(--white);
+      font-weight: 800;
+      text-decoration: none;
+      box-shadow: 0 12px 26px rgba(184, 91, 56, 0.28);
+      white-space: nowrap;
+    }
+
+    .call-btn.secondary {
+      background: var(--forest);
+      box-shadow: none;
+    }
+
+    .hero {
+      min-height: calc(100vh - 66px);
+      display: grid;
+      align-items: end;
+      position: relative;
+      color: var(--white);
+      isolation: isolate;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background:
+        linear-gradient(90deg, rgba(8, 30, 24, 0.9), rgba(8, 30, 24, 0.58) 45%, rgba(8, 30, 24, 0.24)),
+        url("https://source.unsplash.com/1800x1200/?snake,wildlife") center / cover;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      z-index: -1;
+      height: 170px;
+      background: linear-gradient(0deg, var(--paper), rgba(251, 250, 244, 0));
+    }
+
+    .hero-content {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: clamp(54px, 10vw, 110px) 0 84px;
+    }
+
+    .hero-logo {
+      width: clamp(138px, 22vw, 210px);
+      aspect-ratio: 1;
+      margin-bottom: 20px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.94);
+      border: 3px solid rgba(246, 196, 83, 0.72);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.24);
+      object-fit: cover;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 18px;
+      padding: 8px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.32);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.12);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 840px;
+      margin: 0;
+      font-size: clamp(42px, 8vw, 86px);
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+
+    .hero-text {
+      max-width: 710px;
+      margin: 22px 0 30px;
+      font-size: clamp(17px, 2.2vw, 22px);
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .location-line {
+      margin-top: 20px;
+      color: rgba(255, 255, 255, 0.86);
+      font-weight: 700;
+    }
+
+    main {
+      position: relative;
+      margin-top: -34px;
+    }
+
+    section {
+      padding: clamp(54px, 8vw, 92px) clamp(16px, 5vw, 64px);
+    }
+
+    .quick-strip {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+      padding: 18px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .quick-item {
+      padding: 20px;
+      border-radius: 8px;
+      background: #f5f7ef;
+    }
+
+    .quick-item strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--forest);
+      font-size: 18px;
+    }
+
+    .section-head {
+      width: min(980px, 100%);
+      margin: 0 auto 30px;
+    }
+
+    .section-head h2 {
+      margin: 0 0 10px;
+      color: var(--forest);
+      font-size: clamp(30px, 5vw, 52px);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    .section-head p {
+      max-width: 760px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .split {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: clamp(22px, 4vw, 44px);
+      align-items: center;
+    }
+
+    .portrait {
+      min-height: 520px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: var(--moss);
+    }
+
+    .info-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .info-row {
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 14px;
+      align-items: start;
+      padding: 16px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .icon {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--moss);
+      color: var(--forest);
+      font-size: 20px;
+    }
+
+    .info-row h3,
+    .step h3,
+    .faq h3 {
+      margin: 0 0 4px;
+      color: var(--forest);
+      font-size: 18px;
+    }
+
+    .info-row p,
+    .step p,
+    .faq p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .steps {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .step {
+      padding: 22px;
+      min-height: 210px;
+      border-radius: 8px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      box-shadow: 0 12px 34px rgba(12, 34, 27, 0.08);
+    }
+
+    .step-number {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 20px;
+      border-radius: 50%;
+      background: var(--forest);
+      color: var(--sun);
+      font-weight: 900;
+    }
+
+    .alert-band {
+      background: var(--forest);
+      color: var(--white);
+    }
+
+    .alert-grid {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 26px;
+    }
+
+    .do-box {
+      padding: 26px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .do-box h2 {
+      margin: 0 0 16px;
+      font-size: 28px;
+      letter-spacing: 0;
+    }
+
+    .check-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    .check-list li {
+      position: relative;
+      padding-left: 30px;
+      color: rgba(255, 255, 255, 0.88);
+    }
+
+    .check-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--sun);
+      font-weight: 900;
+    }
+
+    .check-list.dont li::before {
+      content: "!";
+      color: #ff9c72;
+    }
+
+    .gallery {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr 0.8fr;
+      grid-auto-rows: 250px;
+      gap: 14px;
+    }
+
+    .photo {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      background: var(--moss);
+    }
+
+    .photo:first-child {
+      grid-row: span 2;
+    }
+
+    .photo span {
+      position: absolute;
+      left: 14px;
+      right: 14px;
+      bottom: 14px;
+      padding: 9px 12px;
+      border-radius: 8px;
+      background: rgba(17, 56, 44, 0.82);
+      color: var(--white);
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .precautions {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .precaution {
+      padding: 24px;
+      border-radius: 8px;
+      background: #eef4e4;
+      border: 1px solid var(--line);
+    }
+
+    .precaution h3 {
+      margin: 0 0 8px;
+      color: var(--forest);
+      font-size: 20px;
+    }
+
+    .precaution p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .contact-panel {
+      width: min(1000px, 100%);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 22px;
+      align-items: center;
+      padding: clamp(24px, 5vw, 42px);
+      border-radius: 8px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .contact-panel h2 {
+      margin: 0 0 8px;
+      color: var(--forest);
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.05;
+    }
+
+    .contact-panel p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .faq-grid {
+      width: min(980px, 100%);
+      margin: 0 auto;
+      display: grid;
+      gap: 12px;
+    }
+
+    details.faq {
+      padding: 19px 20px;
+      border-radius: 8px;
+      background: var(--white);
+      border: 1px solid var(--line);
+    }
+
+    .faq summary {
+      cursor: pointer;
+      color: var(--forest);
+      font-weight: 900;
+      list-style: none;
+    }
+
+    .faq summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq p {
+      margin-top: 10px;
+    }
+
+    footer {
+      padding: 32px clamp(16px, 5vw, 64px);
+      background: #0d2d24;
+      color: rgba(255, 255, 255, 0.72);
+      text-align: center;
+    }
+
+    footer strong {
+      color: var(--white);
+    }
+
+    .floating-call {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 30;
+    }
+
+    @media (max-width: 920px) {
+      .nav {
+        display: none;
+      }
+
+      .quick-strip,
+      .steps,
+      .alert-grid,
+      .precautions,
+      .split,
+      .contact-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .portrait {
+        min-height: 360px;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .topbar {
+        padding: 10px 12px;
+      }
+
+      .brand span:last-child {
+        max-width: 170px;
+      }
+
+      .topbar .call-btn {
+        min-height: 40px;
+        padding: 0 12px;
+        font-size: 13px;
+      }
+
+      .hero {
+        min-height: 690px;
+      }
+
+      .hero-content {
+        padding-bottom: 70px;
+      }
+
+      .hero-actions .call-btn {
+        width: 100%;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 230px;
+      }
+
+      .photo:first-child {
+        grid-row: span 1;
+      }
+
+      .floating-call {
+        left: 14px;
+        right: 14px;
+      }
+
+      .floating-call .call-btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar" aria-label="Main navigation">
+    <a class="brand" href="#home" aria-label="Mohammed Akhil Snake Rescue home">
+      <img class="brand-logo" src="snake-rescue-logo.png" alt="Snake Rescue logo">
+      <span>Mohammed Akhil Snake Rescue</span>
+    </a>
+    <nav class="nav" aria-label="Page sections">
+      <a href="#what-to-do">What To Do</a>
+      <a href="#precautions">Precautions</a>
+      <a href="#faqs">FAQs</a>
+    </nav>
+    <a class="call-btn" href="tel:+919948518596" aria-label="Call Mohammed Akhil now">Call Now</a>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <img class="hero-logo" src="snake-rescue-logo.png" alt="Snake Rescue logo">
+      <div class="eyebrow">24/7 Humane Snake Rescue</div>
+      <h1>Mohammed Akhil - Professional Snake Rescue</h1>
+      <p class="hero-text">Protecting people and animals through calm, safe snake rescue in Yousuf Guda, Jawahar Nagar, Hyderabad. If you see a snake, keep distance and call for help immediately.</p>
+      <div class="hero-actions">
+        <a class="call-btn" href="tel:+919948518596">Call +91 9948518596</a>
+        <a class="call-btn secondary" href="#what-to-do">Emergency Steps</a>
+      </div>
+      <div class="location-line">Serving Yousuf Guda, Jawahar Nagar, Hyderabad and nearby areas</div>
+    </div>
+  </section>
+
+  <main>
+    <section aria-label="Fast safety highlights">
+      <div class="quick-strip">
+        <div class="quick-item">
+          <strong>Do not touch</strong>
+          Keep children, pets, and crowds away from the snake.
+        </div>
+        <div class="quick-item">
+          <strong>Watch from distance</strong>
+          Note where it moves without blocking its escape route.
+        </div>
+        <div class="quick-item">
+          <strong>Call rescue</strong>
+          A trained rescuer can relocate it safely and humanely.
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="split">
+        <div class="portrait">
+          <img src="https://source.unsplash.com/900x1100/?snake,rescue" alt="Snake in natural habitat">
+        </div>
+        <div>
+          <div class="section-head" style="margin: 0;">
+            <h2>Safe rescue with respect for every life</h2>
+            <p>Snakes usually enter homes and buildings while searching for shelter, food, or cooler places. The safest response is not panic or force. Mohammed Akhil helps protect families while giving snakes a chance to return to a safer natural habitat.</p>
+          </div>
+          <div class="info-list">
+            <div class="info-row">
+              <div class="icon" aria-hidden="true">☎</div>
+              <div>
+                <h3>Emergency Contact</h3>
+                <p><a href="tel:+919948518596">+91 9948518596</a></p>
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="icon" aria-hidden="true">⌖</div>
+              <div>
+                <h3>Location</h3>
+                <p>Yousuf Guda, Jawahar Nagar, Hyderabad</p>
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="icon" aria-hidden="true">♻</div>
+              <div>
+                <h3>Animal Protection</h3>
+                <p>Humane handling, public safety, and awareness-first rescue support.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="what-to-do">
+      <div class="section-head">
+        <h2>What to do when you see a snake</h2>
+        <p>Stay calm and create space. Most snakebite incidents happen when people try to catch, kill, or move the snake themselves.</p>
+      </div>
+      <div class="steps">
+        <article class="step">
+          <div class="step-number">1</div>
+          <h3>Stop and step back</h3>
+          <p>Move slowly away. Keep at least several meters of distance and do not corner the snake.</p>
+        </article>
+        <article class="step">
+          <div class="step-number">2</div>
+          <h3>Clear the area</h3>
+          <p>Take children, elderly people, pets, and bystanders away from the room, garden, vehicle, or stairway.</p>
+        </article>
+        <article class="step">
+          <div class="step-number">3</div>
+          <h3>Observe safely</h3>
+          <p>If possible, watch where the snake goes from a safe distance. Do not poke it or throw objects.</p>
+        </article>
+        <article class="step">
+          <div class="step-number">4</div>
+          <h3>Call rescue</h3>
+          <p>Call Mohammed Akhil and share your exact location, the snake's last position, and any nearby risks.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="alert-band" id="snakebite">
+      <div class="alert-grid">
+        <div class="do-box">
+          <h2>If someone is bitten</h2>
+          <ul class="check-list">
+            <li>Seek emergency medical care immediately.</li>
+            <li>Keep the person calm, seated or lying down, and still.</li>
+            <li>Remove rings, watches, or tight clothing before swelling starts.</li>
+            <li>Take a photo of the snake only from a safe distance, if possible.</li>
+            <li>Cover the bite with a clean, dry dressing while waiting for help.</li>
+          </ul>
+        </div>
+        <div class="do-box">
+          <h2>Do not do these</h2>
+          <ul class="check-list dont">
+            <li>Do not try to catch, kill, or handle the snake.</li>
+            <li>Do not cut the wound or suck out venom.</li>
+            <li>Do not apply ice, electric shock, or folk remedies.</li>
+            <li>Do not use a tourniquet or tightly tie the limb.</li>
+            <li>Do not drink alcohol or delay hospital treatment.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section aria-label="Snake photo gallery">
+      <div class="section-head">
+        <h2>Snakes are safest when handled by trained rescuers</h2>
+        <p>Whether the snake is in a garden, parking area, home, shop, or school, keep the space quiet and wait for trained help.</p>
+      </div>
+      <div class="gallery">
+        <figure class="photo">
+          <img src="https://source.unsplash.com/1000x1200/?cobra,snake" alt="Cobra snake close up">
+          <span>Cobras need professional distance and careful handling</span>
+        </figure>
+        <figure class="photo">
+          <img src="https://source.unsplash.com/900x700/?snake,grass" alt="Snake moving through grass">
+          <span>Snakes can hide in grass and gardens</span>
+        </figure>
+        <figure class="photo">
+          <img src="https://source.unsplash.com/900x700/?python,snake" alt="Python snake in natural habitat">
+          <span>Large snakes should never be lifted by the public</span>
+        </figure>
+        <figure class="photo">
+          <img src="https://source.unsplash.com/900x700/?reptile,snake" alt="Snake scales close up">
+          <span>Identification is useful, but safety comes first</span>
+        </figure>
+        <figure class="photo">
+          <img src="https://source.unsplash.com/900x700/?wildlife,snake" alt="Wild snake outdoors">
+          <span>Most snakes avoid people when given an escape route</span>
+        </figure>
+      </div>
+    </section>
+
+    <section id="precautions">
+      <div class="section-head">
+        <h2>Precautions around home and work</h2>
+        <p>Simple habits reduce surprise encounters and make rescue easier if a snake appears.</p>
+      </div>
+      <div class="precautions">
+        <article class="precaution">
+          <h3>Keep surroundings clear</h3>
+          <p>Remove unused bricks, wood piles, tall grass, and clutter where snakes or rodents may hide.</p>
+        </article>
+        <article class="precaution">
+          <h3>Control food sources</h3>
+          <p>Store grains and waste properly. Rodents attract snakes, especially near houses and shops.</p>
+        </article>
+        <article class="precaution">
+          <h3>Use lights at night</h3>
+          <p>Carry a torch in dark areas, staircases, gardens, parking spaces, and near drains.</p>
+        </article>
+        <article class="precaution">
+          <h3>Wear protection</h3>
+          <p>Use shoes, long pants, and gloves when clearing brush, debris, or storage rooms.</p>
+        </article>
+        <article class="precaution">
+          <h3>Seal entry points</h3>
+          <p>Close gaps below doors, broken vents, drain openings, and holes near compound walls.</p>
+        </article>
+        <article class="precaution">
+          <h3>Teach children</h3>
+          <p>Tell children never to touch a snake, even if it looks small, slow, or injured.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact-panel">
+        <div>
+          <h2>Need urgent snake rescue?</h2>
+          <p>Call directly and share your landmark, exact location, and where the snake was last seen.</p>
+        </div>
+        <a class="call-btn" href="tel:+919948518596">Call +91 9948518596</a>
+      </div>
+    </section>
+
+    <section id="faqs">
+      <div class="section-head">
+        <h2>FAQs</h2>
+        <p>Quick answers for common snake rescue situations in homes, shops, schools, and outdoor areas.</p>
+      </div>
+      <div class="faq-grid">
+        <details class="faq" open>
+          <summary>Should I try to catch the snake before the rescuer arrives?</summary>
+          <p>No. Keep distance and watch from a safe place if possible. Trying to catch or kill the snake can cause a bite and makes rescue harder.</p>
+        </details>
+        <details class="faq">
+          <summary>Can I send a photo for identification?</summary>
+          <p>Yes, only if you can take it safely from far away. Do not move closer for a better picture.</p>
+        </details>
+        <details class="faq">
+          <summary>What should I tell on the phone?</summary>
+          <p>Share your name, exact address, nearest landmark, where the snake is now, whether anyone is bitten, and whether pets or children are nearby.</p>
+        </details>
+        <details class="faq">
+          <summary>What if the snake disappears?</summary>
+          <p>Do not search with bare hands. Close the room or area if safe, keep people away, and tell the rescuer the last seen location.</p>
+        </details>
+        <details class="faq">
+          <summary>Are all snakes dangerous?</summary>
+          <p>No, many snakes are non-venomous and help control rodents. Still, treat every unknown snake with caution and call a trained rescuer.</p>
+        </details>
+        <details class="faq">
+          <summary>Do you protect the snake too?</summary>
+          <p>Yes. The goal is public safety and humane rescue, so the animal is handled with care and moved away from conflict whenever possible.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <div class="floating-call">
+    <a class="call-btn" href="tel:+919948518596">Emergency Call</a>
+  </div>
+
+  <footer>
+    <strong>Mohammed Akhil - Professional Snake Rescue</strong><br>
+    Yousuf Guda, Jawahar Nagar, Hyderabad | <a href="tel:+919948518596">+91 9948518596</a><br>
+    Safety guidance on this page is general awareness and does not replace emergency medical care after a bite.
+  </footer>
+</body>
+</html>
